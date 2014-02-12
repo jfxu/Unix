@@ -13,4 +13,4 @@ source doit.sh
 
 // Specify the file type
 
-find . -name "*.sas" | xargs grep -l "string" | awk '{print "rm "$1}' > doit.sh
+find . -name "*.sas" -o -name "*.log" | xargs grep -l "string" | awk '{print "rm "$1}' > doit.sh
