@@ -12,4 +12,5 @@ gvim doit.sh // check for murphy and his law
 source doit.sh
 
 // Specify the file type
+
 find . -name "*.sas" | xargs grep -l "string" | awk '{print "rm "$1}' > doit.sh
