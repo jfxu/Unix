@@ -18,3 +18,7 @@ find . -name "*.sas" -o -name "*.log" | xargs grep -l "string" | awk '{print "rm
 // Search two strings in files
 
 grep "string1.*string2 | string2 .* string1" *.sas .
+
+//or 
+
+grep "string1" *.sas | grep "string2"
