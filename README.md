@@ -22,3 +22,7 @@ grep "string1.\*string2 | string2 .\* string1" *.sas .
 //or 
 
 grep "string1" \*.sas | grep "string2"
+
+// Search in VIM with word1 and without word2 
+
+/word1 \\( .\*word2\\) /i \@!
