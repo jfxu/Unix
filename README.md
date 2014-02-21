@@ -26,3 +26,12 @@ grep "string1" \*.sas | grep "string2"
 // Search in VIM with word1 and without word2 
 
 /word1 \\( .\*word2\\) /i \@!
+
+// SAS select all variables EXCEPT 
+
+proc sql;
+    select name into :columns separated by ' ' 
+    from dictionary.columns 
+    where libname = 'LIB' and memname = 'TABLE' 
+      and name ne 'COLUMN_TO_BE_EXCLUDED';
+quit;
