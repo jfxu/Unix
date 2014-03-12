@@ -31,9 +31,7 @@ grep "string1" \*.sas | grep "string2"
 
 
     proc sql;
-
         select name into :columns separated by ' ' 
-    
         from dictionary.columns
     
         where libname = 'LIB' and memname = 'TABLE' 
