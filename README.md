@@ -35,3 +35,7 @@ proc sql;
     where libname = 'LIB' and memname = 'TABLE' 
       and name ne 'COLUMN_TO_BE_EXCLUDED';
 quit;
+
+// Remove unix return (^M) in Vim
+
+:%s/\r\(\n\)/\1/g
