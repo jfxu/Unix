@@ -33,6 +33,6 @@ SAS select all variables EXCEPT
             and name ne 'COLUMN_TO_BE_EXCLUDED';
     quit;
 
-Remove unix return (^M) in Vim
+Remove unix return (    ^M  ) in Vim
 
     :%s/\r\(\n\)/\1/g
