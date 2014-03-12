@@ -29,17 +29,18 @@ grep "string1" \*.sas | grep "string2"
 
 // SAS select all variables EXCEPT 
 
-proc sql;
 
-    select name into :columns separated by ' ' 
+    proc sql;
+
+        select name into :columns separated by ' ' 
     
-    from dictionary.columns
+        from dictionary.columns
     
-    where libname = 'LIB' and memname = 'TABLE' 
+        where libname = 'LIB' and memname = 'TABLE' 
     
-      and name ne 'COLUMN_TO_BE_EXCLUDED';
+            and name ne 'COLUMN_TO_BE_EXCLUDED';
       
-quit;
+    quit;
 
 // Remove unix return (^M) in Vim
 
