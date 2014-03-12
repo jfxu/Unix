@@ -30,10 +30,15 @@ grep "string1" \*.sas | grep "string2"
 // SAS select all variables EXCEPT 
 
 proc sql;
+
     select name into :columns separated by ' ' 
-    from dictionary.columns 
+    
+    from dictionary.columns
+    
     where libname = 'LIB' and memname = 'TABLE' 
+    
       and name ne 'COLUMN_TO_BE_EXCLUDED';
+      
 quit;
 
 // Remove unix return (^M) in Vim
