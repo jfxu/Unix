@@ -48,4 +48,11 @@ Check duplicate observations in SAS
             ;
         quit;
     %mend dups;
-        
+
+Adding data to a data set
+    proc sql;
+        insert into TABLE
+            set variable1 = "value1",
+                variable2 = "value2"
+            ;
+    quit;
