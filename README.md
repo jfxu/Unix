@@ -68,4 +68,15 @@ or
             value ("val1", "val2")
             ;
     quit;
-        
+
+or adding data set into table
+
+    proc sql;
+        insert into TABLE (variable1, variable2)
+            select p_variable1, p_variable2
+            from ANOTHER_TABLE
+            where ....
+        ;
+    quit;
+
+    
