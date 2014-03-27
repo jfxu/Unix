@@ -55,5 +55,7 @@ Adding data to a data set
         insert into TABLE
             set variable1 = "value1",
                 variable2 = "value2"
+            set variable1 = "val1"
+                variable2 = "val2"
             ;
     quit;
