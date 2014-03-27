@@ -36,3 +36,15 @@ SAS select all variables EXCEPT
 Remove unix return (    ^M  ) in Vim
 
     :%s/\r\(\n\)/\1/g
+
+Check duplicate observations in SAS
+    
+    %macro dups(lib, table, groupby);
+        proc sql noprint;
+            select &groupby, count(*) as duplicate_counts
+            group by &groupby
+            having count(*) > 1
+            ;
+        quit;
+    %mend dups;
+        
