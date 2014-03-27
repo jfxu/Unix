@@ -59,3 +59,13 @@ Adding data to a data set
                 variable2 = "val2"
             ;
     quit;
+
+or
+    
+    proc sql;
+        insert into TABLE (variable1, variable2)
+            value ("value1", "value2")
+            value ("val1", "val2")
+            ;
+    quit;
+        
