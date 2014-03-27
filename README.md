@@ -39,9 +39,10 @@ Remove unix return (    ^M  ) in Vim
 
 Check duplicate observations in SAS
     
-    %macro dups(lib, table, groupby);
+    %macro dups(table, groupby);
         proc sql noprint;
             select &groupby, count(*) as duplicate_counts
+            from &table
             group by &groupby
             having count(*) > 1
             ;
