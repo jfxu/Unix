@@ -1,4 +1,4 @@
-## Helpful Unix Commands
+### Helpful Unix Commands
 ====
 
 Find the files in the current directory and subdirectory and then delete them
