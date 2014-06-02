@@ -9,7 +9,7 @@ Find the files in the current directory and subdirectory and then delete them
 
 Specify the file type
 
-    find . -name "\*.sas" -o -name "\*.log" | xargs grep -l "string" | awk '{print "rm "$1}' > doit.sh
+    find . -name "*.sas" -o -name "\*.log" | xargs grep -l "string" | awk '{print "rm "$1}' > doit.sh
 
 Search two strings in files
 
