@@ -86,3 +86,8 @@ SQL: count using different conditions
     count(case when condition2 then 1 end) AS n2,
     count(case when condition3 then 1 end) AS n3
     from data
+
+Select count of rows in another table
+    
+    select A.*, (SELECT COUNT(*) FROM B WHERE B.a_id = A.id) AS TOT FROM A
+
