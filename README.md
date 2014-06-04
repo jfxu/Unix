@@ -79,7 +79,7 @@ or adding data set into table
         ;
     quit;
 
-SQL: count using different condition
+SQL: count using different conditions
 
     select
     count(case when condition1 then 1 end) AS n1,
