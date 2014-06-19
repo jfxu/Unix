@@ -89,5 +89,5 @@ SQL: count using different conditions
 
 Select count of rows in another table
     
-    select A.*, (SELECT COUNT(*) FROM B WHERE B.a_id = A.id) AS TOT FROM A
+    select A.*, (SELECT COUNT(*) FROM B WHERE B.id = A.id) AS TOT FROM A
 
