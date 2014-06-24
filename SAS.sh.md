@@ -55,9 +55,9 @@ or adding data set into table
 SQL: count using different conditions
 
     select
-    count(case when condition1 then 1 end) AS n1,
-    count(case when condition2 then 1 end) AS n2,
-    count(case when condition3 then 1 end) AS n3
+        count(case when condition1 then 1 end) AS n1,
+        count(case when condition2 then 1 end) AS n2,
+        count(case when condition3 then 1 end) AS n3
     from data
 
 Select count of rows in another table:
