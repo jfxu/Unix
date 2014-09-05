@@ -1,17 +1,17 @@
 ### Useful Unix/Vim Commands
 ====
 
-Search "wordA" AND "wordB" AND NOT ("wordC" OR "wordD")" in VIM:
+#### Search "wordA" AND "wordB" AND NOT ("wordC" OR "wordD")" in VIM:
 
     /\v^(.*wordA)&(.*wordB)&(.*wordC|.*wordD)@!
 
-Find the files in the current directory and subdirectory and then delete them
+#### Find the files in the current directory and subdirectory and then delete them
 
     find . | xargs grep -l "string" | awk '{print "rm "$1}' > doit.sh
     gvim doit.sh // check for murphy and his law
     source doit.sh
 
-Specify the file type
+#### Specify the file type
 
     find . -name "*.sas" -o -name "\*.log" | xargs grep -l "string" | awk '{print "rm "$1}' > doit.sh
 
