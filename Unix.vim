@@ -1,4 +1,4 @@
-### Useful Unix Commands
+### Useful Unix/Vim Commands
 ====
 
 Search "wordA" AND "wordB" AND NOT ("wordC" OR "wordD")" in VIM:
