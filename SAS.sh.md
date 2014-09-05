@@ -1,5 +1,3 @@
-### SAS tips
-
 
 SAS select all variables EXCEPT 
 
