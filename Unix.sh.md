@@ -1,6 +1,10 @@
 ### Useful Unix Commands
 ====
 
+Search "wordA" AND "wordB" AND NOT ("wordC" OR "wordD")":
+
+    /\v^(.*wordA)&(.*wordB)&(.*wordC|.*wordD)@!
+
 Find the files in the current directory and subdirectory and then delete them
 
     find . | xargs grep -l "string" | awk '{print "rm "$1}' > doit.sh
