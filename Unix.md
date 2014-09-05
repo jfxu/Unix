@@ -1,7 +1,7 @@
 ### Useful Unix/Vim Commands
 ====
 
-Search "wordA" AND "wordB" AND NOT ("wordC" OR "wordD")" in VIM
+Search "wordA" AND "wordB" AND NOT ("wordC" OR "wordD") in VIM
 
     /\v^(.*wordA)&(.*wordB)&(.*wordC|.*wordD)@!
 
