@@ -1,5 +1,3 @@
-### Useful Unix/Vim Commands
-====
 
 Search "wordA" AND "wordB" AND NOT ("wordC" OR "wordD") in VIM
 
@@ -30,6 +28,3 @@ Search in VIM with word1 and without word2
 Remove unix return (    ^M  ) in Vim
 
     :%s/\r\(\n\)/\1/g
-
-
-
