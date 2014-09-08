@@ -28,3 +28,8 @@ Search in VIM with word1 and without word2
 Remove unix return (    ^M  ) in Vim
 
     :%s/\r\(\n\)/\1/g
+
+Close all buffers:
+    :qall
+or 
+    :qwall
