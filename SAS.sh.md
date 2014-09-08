@@ -61,3 +61,15 @@ SQL: count using different conditions
 Select count of rows in another table:
     
     select A.*, (SELECT COUNT(*) FROM B WHERE B.id = A.id) AS TOT FROM A
+
+Check SAS data set:
+
+    %let data_set = libname.data_set_name;
+
+    %let dsid = %sysfunc (open(&data_set));
+
+    %let nobs = %sysfunc(attrn(&dsid,nlobs));
+
+    %let create_date = %sysfunc(attrn(&dsid, crdte));
+
+    %let close_flag = %sysfunc(close(&dsid));
