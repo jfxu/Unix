@@ -73,3 +73,7 @@ Check SAS data set:
     %let create_date = %sysfunc(attrn(&dsid, crdte));
 
     %let close_flag = %sysfunc(close(&dsid));
+
+Remove title:
+    
+    title;
