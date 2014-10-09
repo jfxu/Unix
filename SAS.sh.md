@@ -77,3 +77,18 @@ Check SAS data set:
 Remove title:
     
     title;
+
+to update a format, use format width:
+    
+    proc format;
+        value wrong
+                1 = 'first'
+            other = [old.]   /* the default length will be 40*/
+            ;
+        value correct
+                1 = 'first'
+            other = [old80.] /* made the length 80*/
+            ;
+    run;
+    
+    /* [ ] could be replaced by (| |)*/
