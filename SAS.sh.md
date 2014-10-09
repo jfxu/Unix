@@ -83,7 +83,7 @@ to update a format, use format width:
     proc format;
         value wrong
                 1 = 'first'
-            other = [old.]   /* the default length will be 40*/
+            other = [old.]   /* the default length is 40*/
             ;
         value correct
                 1 = 'first'
