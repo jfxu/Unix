@@ -1,5 +1,5 @@
 
-SAS select all variables EXCEPT 
+1. SAS select all variables EXCEPT 
 
     proc sql;
         select name into :columns separated by ' ' 
@@ -8,7 +8,7 @@ SAS select all variables EXCEPT
             and name ne 'COLUMN_TO_BE_EXCLUDED';
     quit;
 
-Check duplicate observations in SAS
+2. Check duplicate observations in SAS
 
     %macro dups(table, groupby);
         proc sql noprint;
@@ -20,7 +20,7 @@ Check duplicate observations in SAS
         quit;
     %mend dups;
 
-Adding data to a data set
+3. Adding data to a data set
 
     proc sql;
         insert into TABLE
@@ -50,7 +50,7 @@ or adding data set into table
         ;
     quit;
 
-SQL: count using different conditions
+4. SQL: count using different conditions
 
     select
         count(case when condition1 then 1 end) AS n1,
@@ -58,11 +58,11 @@ SQL: count using different conditions
         count(case when condition3 then 1 end) AS n3
     from data
 
-Select count of rows in another table:
+5. Select count of rows in another table:
     
     select A.*, (SELECT COUNT(*) FROM B WHERE B.id = A.id) AS TOT FROM A
 
-Check SAS data set:
+6. Check SAS data set:
 
     %let data_set = libname.data_set_name;
 
@@ -74,11 +74,11 @@ Check SAS data set:
 
     %let close_flag = %sysfunc(close(&dsid));
 
-Remove title:
+7. Remove title:
     
     title;
 
-to update a format, use format width:
+8. to update a format, use format width:
     
     proc format;
         value wrong
@@ -93,7 +93,7 @@ to update a format, use format width:
     
     /* [ ] could be replaced by (| |)*/
 
-Select the hightest one 
+9. Select the hightest one 
     
     proc sql outobs = 1;     /* Keep one record */
         select name, weight
