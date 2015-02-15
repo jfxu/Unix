@@ -101,3 +101,16 @@ or adding data set into table
         order by weight desc
         ;
     quit;
+
+/* Select N-th highest value*/
+
+    %let n = 4;
+    proc sql;
+        select distinct a.name, a.weight
+        from class as a
+        where (select count(distinct b.weight)
+            from class as b
+            where b.weight > a.weight
+            ) = &n - 1
+        ;
+    quit;
