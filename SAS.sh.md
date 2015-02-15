@@ -92,3 +92,12 @@ to update a format, use format width:
     run;
     
     /* [ ] could be replaced by (| |)*/
+
+Select the hightest one 
+    
+    proc sql outobs = 1;     /* Keep one record */
+        select name, weight
+        from class
+        order by weight desc
+        ;
+    quit;
