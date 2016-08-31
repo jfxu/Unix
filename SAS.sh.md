@@ -116,6 +116,7 @@ or adding data set into table
     quit;
     
 /* Add superscription to string */
+
     ODS ESCAPECHAR = "^";
     proc format;
         value superfmt 
