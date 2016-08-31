@@ -114,3 +114,12 @@ or adding data set into table
             ) = &n - 1
         ;
     quit;
+    
+/* Add superscription to string */
+    ODS ESCAPECHAR = "^";
+    proc format;
+        value superfmt 
+            1 = 'Low Dose^{super 1}'
+            2 = 'High Dose^{super 2}'
+            ;
+    run;
