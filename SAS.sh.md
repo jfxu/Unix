@@ -1,5 +1,5 @@
 
-1. SAS select all variables EXCEPT
+/* 1. SAS select all variables EXCEPT */
     
     proc sql;
         select name into :columns separated by ' ' 
